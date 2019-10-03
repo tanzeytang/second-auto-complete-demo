@@ -34,11 +34,11 @@
   };
 
   async function remoteCall(input) {
-    //const response = await fetch(`http://autocomplete.geocoder.api.here.com/6.2/suggest.json?app_id=4IKCkjwaZesTZW0WqFrA&app_code=CIfJLMF_at6bUUK09tHyAg&query=${input}&beginHighlight=<b>&endHighlight=</b>`);
+    const response = await fetch(/api/autocomplete/${input});
     
-    const response = await fetch(
-    `http://autocomplete.geocoder.api.here.com/6.2/suggest.json?app_id=4IKCkjwaZesTZW0WqFrA&app_code=CIfJLMF_at6bUUK09tHyAg&query=${input}&beginHighlight=<b>&endHighlight=</b>`
-   );
+    //const response = await fetch(
+   // `http://autocomplete.geocoder.api.here.com/6.2/suggest.json?app_id=4IKCkjwaZesTZW0WqFrA&app_code=CIfJLMF_at6bUUK09tHyAg&query=${input}&beginHighlight=<b>&endHighlight=</b>`
+   //);
     return await response.json();
   }
   var inDebounce;
